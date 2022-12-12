@@ -35,9 +35,11 @@ echo $nomeCane;
   <div class="input-group mb-3">
  <input name="replace" class="mt-5 form-control w-100" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"> 
 </div> 
-  </form>
 
-<!-- <button type="submit" class="btn btn-primary">Send</button> -->
+<button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+
 
 
 <!-- <h1>Ciao sono : <?php echo $name ?></h1> -->
