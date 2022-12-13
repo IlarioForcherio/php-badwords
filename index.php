@@ -4,16 +4,19 @@
 $name= "Ilario";
 $paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde eius veniam odit dolorum dignissimos, vitae consequatur totam commodi incidunt, nemo adipisci! Dolorum minus praesentium voluptate explicabo cum reprehenderit temporibus ipsum!';
 
+
 $replaceInput=$_GET['replace'];
 $replaceString="****";
+$textCenter='text-center';
+
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 
-//$nomeCane = $_GET['fuffi'];
+// $nomeCane = $_GET['nomeCane'];
 
-echo $nomeCane;
-
-
-
+// echo $nomeCane;
 
 
 
@@ -30,7 +33,7 @@ echo $nomeCane;
 </head>
 <body>
 
-<div class="m-auto text-center w-50">
+<div class="m-auto <?php echo $textCenter ?> $ w-50"> 
   <form action="" method=''>
   <div class="input-group mb-3">
  <input name="replace" class="mt-5 form-control w-100" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"> 
@@ -45,8 +48,12 @@ echo $nomeCane;
 <!-- <h1>Ciao sono : <?php echo $name ?></h1> -->
 
 <p class="mt-4" > Il paragrafo e' lungo: <?php echo strlen($paragraph)?> caratteri. </p>
+<!--1- cosa voglio modificare(stringa da modificare ) 
+    2- con cosa voglio modificarla  (stringa che sostituira la stringa a punto 1)
+    3- zona d'azione-->
+<p> <?php echo str_replace( "$replaceInput",$replaceString , "$paragraph" ) ?></p>
 
-<p> <?php echo str_replace( "$replaceInput",$replaceString , "$paragraph" ) ?>  </p>
+
 
 
 </div>
